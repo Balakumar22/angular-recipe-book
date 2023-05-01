@@ -4,3 +4,15 @@
   justify-content: flex-start;
   gap: 5px;
 }
+
+.auth-password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.auth-password-container span {
+  font-size: 18px;
+  position: absolute;
+  right: 1%;
+}

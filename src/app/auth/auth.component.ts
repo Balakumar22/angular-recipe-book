@@ -16,6 +16,7 @@ export class AuthComponent {
   isLoading = false;
   error = null;
   authForm: FormGroup;
+  isPasswordOpen = false;
 
   authSub: Subscription;
   closeSub: Subscription;
@@ -38,6 +39,10 @@ export class AuthComponent {
     });
 
     this.authService.user.subscribe((user) => console.log(user));
+  }
+
+  onTogglePassword() {
+    this.isPasswordOpen = !this.isPasswordOpen;
   }
 
   onSwitchMode() {

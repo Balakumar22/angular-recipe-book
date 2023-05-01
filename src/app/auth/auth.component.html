@@ -22,13 +22,20 @@
         />
       </div>
       <div class="form-group">
-        <label for="password">Password</label
-        ><input
-          type="text"
-          id="password"
-          class="form-control"
-          formControlName="password"
-        />
+        <label for="password">Password</label>
+        <div class="auth-password-container">
+          <input
+            [type]="isPasswordOpen ? 'text' : 'password'"
+            id="password"
+            class="form-control"
+            formControlName="password"
+          />
+          <span (click)="onTogglePassword()">
+            <ion-icon
+              [name]="isPasswordOpen ? 'eye-off-outline' : 'eye-outline'"
+            ></ion-icon>
+          </span>
+        </div>
       </div>
       <div class="auth-form-action-container">
         <button
