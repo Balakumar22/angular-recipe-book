@@ -1,0 +1,17 @@
+<!-- <div *ngIf="open">
+  <div class="backdrop"></div>
+  <div class="alert-box">
+    <p>{{ message }}</p>
+    <div class="alert-box-action">
+      <button class="btn btn-danger" (click)="open = false">Close</button>
+    </div>
+  </div>
+</div> -->
+
+<div class="backdrop" (click)="onClose()"></div>
+<div class="alert-box">
+  <p>{{ message }}</p>
+  <div class="alert-box-action">
+    <button class="btn btn-danger" (click)="onClose()">Close</button>
+  </div>
+</div>
